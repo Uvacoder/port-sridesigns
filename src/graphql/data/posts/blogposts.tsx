@@ -1,19 +1,22 @@
-import { gql } from '@apollo/client'
+import { gql } from 'graphql-request'
+import { graphQLClient } from '../../services/graphcms'
 
-export const GetBlogPosts = gql`
-query {
-  blogPosts (orderBy: publishedAt_DESC) {
-    id
-    title
-    slug
-    excerpt
-    publishedAt
-    coverImage {
-      size
-      width
-      height
-      url
+export async function GetCaseStudies() {
+  const query = gql`
+  {
+    blogPosts (orderBy: publishedAt_DESC) {
+      id
+      title
+      slug
+      excerpt
+      publishedAt
+      coverImage {
+        width
+        height
+        url
+      }
     }
   }
+  `
+  return await graphQLClient.request(query);
 }
-`
