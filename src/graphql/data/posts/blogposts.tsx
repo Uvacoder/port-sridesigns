@@ -1,7 +1,7 @@
 import { gql } from 'graphql-request'
 import { graphQLClient } from '../../services/graphcms'
 
-export async function GetCaseStudies() {
+export async function GetBlogPosts() {
   const query = gql`
   {
     blogPosts (orderBy: publishedAt_DESC) {
