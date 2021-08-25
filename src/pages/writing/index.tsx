@@ -5,7 +5,20 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { GetBlogPosts } from "../../graphql/data/posts/blogposts";
 
-
+interface Props {
+  slug: string
+  blogs: {
+    id: string
+    title: string
+    publishedAt: string
+    summary: string
+    bannerImage: {
+      url: string
+      width: number
+      height: number
+    }
+  }
+}
 
 export async function getStaticProps() {
   const blogs = await GetBlogPosts()
@@ -19,7 +32,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Writing({ blogs }) {
+export default function Writing({ blogs }: Props) {
   console.log(blogs);
   return (
     <Layout>
@@ -35,7 +48,7 @@ export default function Writing({ blogs }) {
             art and tech.</p>
         </header>
         <div className="max-w-screen-sm md:max-w-xl mx-auto my-16 space-y-10">
-          {blogs?.blogPosts.map((blog) => (
+          {blogs?.blogPosts?.map((blog) => (
             <div key={blog.slug} className="space-y-2">
               <Link href={`/writing/${blog.slug}`}>
                 <a>

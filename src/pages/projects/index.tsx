@@ -1,45 +1,85 @@
-import { graph } from "../../graphql/services/graphcms";
-import { GetCaseStudies } from "../../graphql/data/projects/casestudies";
-import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
+import Layout from "../../components/Layout";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import SelectedWorks from "../../components/SelectedWorks";
+import { GetCaseStudies } from "../../graphql/data/projects/casestudies";
 
-
-
-export async function getStaticProps() {
-  const { data } = await graph.query({
-    query: GetCaseStudies,
-  });
-
-  return {
-    props: {
-      projects: data.caseStudies
-    },
-  };
+interface Props {
+  slug: string
+  caseStudies: {
+    projects: {
+      id: string
+      title: string
+      publishedAt: string
+      summary: string
+      bannerImage: {
+        url: string
+        width: number
+        height: number
+      }
+    }
+  }
 }
 
 
-export default function CaseStudies({ projects }) {
+export async function getStaticProps() {
+  const projects = await GetCaseStudies()
+
+  return {
+    //This data is a little dynamic, so we'll update it every hour.
+    revalidate: 60 * 60,
+    props: {
+      projects
+    },
+  }
+}
+
+export default function Projects({ projects }: Props) {
+  console.log(projects);
   return (
-    <>
+    <Layout>
+      <Head>
+        <title>Projects</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Header />
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl font-light text-gray-700 my-10 uppercase tracking-widest">Case Studies</h1>
-        <div className="space-y-8">
-          {projects.map((project) => (
-            <div key={project.slug}>
-              <h3 className="text-2xl font-bold pb-2">{project.title}</h3>
-              <p className="text-base font-normal text-gray-600">{project.summary}</p>
-              <Image
-                src={project.bannerImage.url}
-                width={project.bannerImage.width}
-                height={project.bannerImage.height}
-                alt={project.title}
-              />
-            </div>
-          )
-          )}
+      <main>
+        <header className="h-80 flex flex-col items-center justify-center">
+          <h1 className="text-6xl text-center font-bold pb-5">Projects</h1>
+          <p className="text-xl text-center max-w-2xl mx-auto">A catalogue of select works, side projects, and experiments.</p>
+        </header>
+
+        <div className="max-w-screen-sm md:max-w-xl lg:max-w-3xl mx-auto my-12">
+
+          {/* Selected works section */}
+
+          <h3 className="text-3xl font-bold mb-8">Selected Works</h3>
+          <div className="lg:grid grid-cols-2 gap-6 mx-auto">
+            {projects?.caseStudies?.map((project) => (
+              <div key={project.slug} className="space-y-2">
+                <Link href={`/projects/${project.slug}`}>
+                  <a>
+                    <h4 className="text-2xl font-bold text-gray-800">{project.title}</h4>
+                  </a>
+                </Link>
+                <p className="text-lg font-normal text-gray-700">{project.summary}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Side projects section */}
+
+          <div className="my-16">
+            <h3 className="text-3xl font-bold mb-8">Side Projects</h3>
+          </div>
+
+
         </div>
-      </div>
-    </>
+      </main>
+      <Footer />
+
+    </Layout>
   )
 }

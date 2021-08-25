@@ -75,7 +75,7 @@ export default function PostView({ blog, content }: Props) {
         <main className="max-w-screen-md mx-auto">
           <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
             <h2 className="text-5xl text-gray-800 font-bold text-center">{blog.title}</h2>
-            <p className="text-xl text-center text-gray-700">{blog.excerpt}</p>
+            <p className="text-lg text-center text-gray-700">{blog.excerpt}</p>
             <div className="flex justify-center space-x-2">
               <Calendar />
               <p className="text-gray-500">{new Date(blog.publishedAt).toDateString()}</p>
