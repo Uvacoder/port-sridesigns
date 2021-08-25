@@ -14,10 +14,32 @@ module.exports = {
       fontFamily: {
         primary: ['"Work Sans"', 'Inter', 'system-ui'],
       },
+
+      typography: (theme) => ({
+        lg: {
+          css: {
+            color: theme('colors.gray.800'),
+            h2: {
+              fontSize: '1.5rem',
+              fontWeight: '700',
+            },
+            strong: {
+              fontWeight: '600',
+            },
+            a: {
+              color: theme('colors.indigo.600'),
+              textDecoration: 'none',
+              fontWeight: '600',
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

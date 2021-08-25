@@ -5,6 +5,9 @@ import ArrowLeft from "../../assets/arrow-left";
 import Calendar from "../../assets/calendar";
 import BlogDivider from "../../components/BlogDivider";
 import { GetPost, GetPostSlug } from "../../graphql/data/posts/post";
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import Footer from "../../components/Footer";
 
 interface Props {
   slug: string
@@ -23,6 +26,7 @@ interface Props {
       markdown: string
     }
   }
+  content: MDXRemoteSerializeResult
 }
 
 export async function getStaticPaths() {
@@ -44,15 +48,21 @@ export async function getStaticProps({ params }) {
     revalidate: 60 * 60,
     props: {
       blog: post.blogPosts[0],
+      content: await serialize(post.blogPosts[0].body.markdown)
     },
   }
 }
 
-export default function PostView({ blog }: Props) {
+export default function PostView({ blog, content }: Props) {
   console.log(blog);
 
   return (
     <Layout>
+      <Head>
+        <title>Writing</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
       <div className="max-w-screen-md lg:max-w-6xl mx-auto">
         <Link href="/writing">
           <a>
@@ -63,7 +73,7 @@ export default function PostView({ blog }: Props) {
           </a>
         </Link>
         <main className="max-w-screen-md mx-auto">
-          <header className="flex-col mt-16 mb-10 space-y-4 justify-center">
+          <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
             <h2 className="text-5xl text-gray-800 font-bold text-center">{blog.title}</h2>
             <p className="text-xl text-center text-gray-700">{blog.excerpt}</p>
             <div className="flex justify-center space-x-2">
@@ -72,9 +82,15 @@ export default function PostView({ blog }: Props) {
             </div>
           </header>
           <BlogDivider />
+
+          <div className="prose prose-lg my-10 mx-auto">
+            <MDXRemote {...content} />
+          </div>
+
         </main>
 
       </div>
+      <Footer />
 
 
     </Layout>
