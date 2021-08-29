@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
-import Link from "next/dist/client/link";
+import Link from "next/link";
+import Image from "next/image";
 import { GetCaseStudy, GetCaseStudySlug } from "../../graphql/data/projects/casestudy"
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
@@ -14,7 +15,7 @@ interface Props {
     title: string
     summary: string
     publishedAt: string
-    coverImage: {
+    bannerImage: {
       url: string
       width: number
       height: number
@@ -23,6 +24,9 @@ interface Props {
       json: string
       markdown: string
     }
+    role: string
+    techStack: string
+    duration: string
   }
   source: MDXRemoteSerializeResult
 }
@@ -64,6 +68,45 @@ export default function CaseStudyView({ casestudy, source }: Props) {
           <h2 className="text-5xl text-gray-800 font-bold text-center">{casestudy.title}</h2>
           <p className="text-lg text-center text-gray-700 max-w-2xl mx-auto">{casestudy.summary}</p>
         </header>
+        <div className="max-w-3xl mx-auto my-5 text-center">
+          <Image
+            src={casestudy.bannerImage.url}
+            alt={casestudy.title}
+            width={800}
+            height={480}
+            objectFit="cover"
+          />
+        </div>
+        <div className="max-w-3xl mx-auto lg:grid grid-cols-3 gap-6">
+          <div className="mx-auto my-5">
+            <h3 className="text-lg font-bold">Activities</h3>
+            {casestudy.role.map((activity) => (
+              <ul key={activity}>
+                <li className="text-base py-1">
+                  {activity}
+                </li>
+              </ul>
+            ))}
+          </div>
+          <div className="mx-auto my-5">
+            <h3 className="text-lg font-bold">Tech Stack</h3>
+            {casestudy.techStack.map((stack) => (
+              <ul key={stack}>
+                <li className="text-base py-1">
+                  {stack}
+                </li>
+              </ul>
+            ))}
+          </div>
+          <div className="mx-auto my-5">
+            <h3 className="text-lg font-bold">Duration</h3>
+            <p className="text-base">{casestudy.duration}</p>
+
+          </div>
+
+        </div>
+
+
 
         <div className="prose prose-lg my-10 mx-auto">
           <MDXRemote {...source} />

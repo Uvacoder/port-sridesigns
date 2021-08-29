@@ -19,6 +19,9 @@ export async function GetCaseStudy(slug) {
         json
         markdown
       }
+      role
+      duration
+      techStack
     }
   }
   `
