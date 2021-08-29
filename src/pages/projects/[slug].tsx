@@ -80,9 +80,9 @@ export default function CaseStudyView({ casestudy, source }: Props) {
         <div className="max-w-3xl mx-auto lg:grid grid-cols-3 gap-6">
           <div className="mx-auto my-5">
             <h3 className="text-lg font-bold">Activities</h3>
-            {casestudy.role.map((activity) => (
+            {casestudy.role.map((activity: string) => (
               <ul key={activity}>
-                <li className="text-base py-1">
+                <li className="text-base py-1 list-disc list-inside">
                   {activity}
                 </li>
               </ul>
@@ -90,9 +90,9 @@ export default function CaseStudyView({ casestudy, source }: Props) {
           </div>
           <div className="mx-auto my-5">
             <h3 className="text-lg font-bold">Tech Stack</h3>
-            {casestudy.techStack.map((stack) => (
+            {casestudy.techStack.map((stack: string) => (
               <ul key={stack}>
-                <li className="text-base py-1">
+                <li className="text-base py-1 list-disc list-inside">
                   {stack}
                 </li>
               </ul>

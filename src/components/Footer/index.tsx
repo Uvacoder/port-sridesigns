@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-6xl mx-auto flex justify-evenly items-center">
         <div className="flex text-gray-500 font-normal text-sm justify-center py-5">
           <p>Sriram Venugopal&nbsp;&nbsp;|&nbsp;&nbsp;Feel free to drop a ‘hello’ @&nbsp;</p>
-          <Link href="mailto:msgsrive@gmail.com" cla>
+          <Link href="mailto:msgsrive@gmail.com">
             <a className="hover:text-indigo-600 hover:underline">msgsrive@gmail.com</a>
           </Link>
         </div>
