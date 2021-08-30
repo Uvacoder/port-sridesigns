@@ -6,38 +6,44 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SelectedWorks from "../../components/SelectedWorks";
 import { GetCaseStudies } from "../../graphql/data/projects/casestudies";
+import SideProjectsList from "../../components/SideProjectsList";
+import { GetSideProjects } from "../../graphql/data/sideprojects/sprojects";
 
 interface Props {
   slug: string
-  caseStudies: {
-    projects: {
-      id: string
-      title: string
-      publishedAt: string
-      summary: string
-      bannerImage: {
-        url: string
-        width: number
-        height: number
-      }
+  projects: {
+    id: string
+    title: string
+    publishedAt: string
+    summary: string
+    bannerImage: {
+      url: string
+      width: number
+      height: number
     }
+  }
+  sideprojects: {
+    title: string
+    publishedAt: string
+    summary: string
   }
 }
 
-
 export async function getStaticProps() {
   const projects = await GetCaseStudies()
+  const sideprojects = await GetSideProjects()
 
   return {
     //This data is a little dynamic, so we'll update it every hour.
     revalidate: 60 * 60,
     props: {
-      projects
+      projects,
+      sideprojects
     },
   }
 }
 
-export default function Projects({ projects }: Props) {
+export default function Projects({ projects, sideprojects }: Props) {
   console.log(projects);
   return (
     <Layout>
@@ -49,38 +55,21 @@ export default function Projects({ projects }: Props) {
       <main>
         <header className="h-80 flex flex-col items-center justify-center">
           <h1 className="text-6xl text-center font-bold pb-5">Projects</h1>
-          <p className="text-xl text-center max-w-2xl mx-auto">A catalogue of select works, side projects, and experiments.</p>
+          <p className="text-xl font-medium text-center max-w-2xl mx-auto">A catalogue of select works, side projects, and experiments.</p>
         </header>
 
-        <div className="max-w-screen-sm md:max-w-xl lg:max-w-3xl mx-auto my-12">
+        <div className="max-w-screen-sm md:max-w-xl lg:max-w-3xl mx-auto">
 
           {/* Selected works section */}
 
           <h3 className="text-3xl font-bold mb-8">Selected Works</h3>
-          <div className="lg:grid grid-cols-2 gap-6 mx-auto">
-            {projects?.caseStudies?.map((project) => (
-              <div key={project.slug} className="space-y-2">
-                <Image
-                  src={project.bannerImage.url}
-                  alt={project.title}
-                  width={project.bannerImage.width}
-                  height={project.bannerImage.height}
-                  objectFit="cover"
-                />
-                <Link href={`/projects/${project.slug}`}>
-                  <a>
-                    <h4 className="text-2xl font-bold text-gray-800 hover:text-indigo-600">{project.title}</h4>
-                  </a>
-                </Link>
-                <p className="text-base font-normal text-gray-700">{project.summary}</p>
-              </div>
-            ))}
-          </div>
+          <SelectedWorks projects={projects} />
 
           {/* Side projects section */}
 
           <div className="my-16">
             <h3 className="text-3xl font-bold mb-8">Side Projects</h3>
+            <SideProjectsList sideprojects={sideprojects} />
           </div>
 
 

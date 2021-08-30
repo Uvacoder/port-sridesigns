@@ -66,7 +66,7 @@ export default function CaseStudyView({ casestudy, source }: Props) {
       <main>
         <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
           <h2 className="text-5xl text-gray-800 font-bold text-center">{casestudy.title}</h2>
-          <p className="text-lg text-center text-gray-700 max-w-2xl mx-auto">{casestudy.summary}</p>
+          <p className="text-lg  font-medium text-center text-gray-700 max-w-2xl mx-auto">{casestudy.summary}</p>
         </header>
         <div className="max-w-3xl mx-auto my-5 text-center">
           <Image

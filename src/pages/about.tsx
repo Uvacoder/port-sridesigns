@@ -18,8 +18,8 @@ export default function About() {
         <header className="bg-yellow-400 h-80 flex items-center">
           <div className="max-w-3xl mx-auto">
             <div className="space-y-4 text-center">
-              <h1 className="text-5xl font-bold">Hello!</h1>
-              <p className="text-lg">Sharing my thoughts on user experience, product design,
+              <h1 className="text-7xl font-bold tracking-tighter">வணக்கம்.</h1>
+              <p className="text-lg font-medium">Sharing my thoughts on user experience, product design,
                 art and tech.</p>
             </div>
           </div>
