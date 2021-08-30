@@ -10,6 +10,9 @@ module.exports = {
         gray: colors.trueGray,
         rose: colors.rose,
         indigo: colors.indigo,
+        twitter: '#03A9F4',
+        linkedin: '#0077B5',
+        clearsky: '#0085FF',
       },
 
       fontFamily: {
