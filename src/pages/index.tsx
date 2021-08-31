@@ -9,6 +9,7 @@ import HomeWork from '../components/Home/CaseStudies'
 import HomeSideProject from '../components/Home/SideProjects'
 import HomeBlogList from '../components/Home/Blogs'
 import HomeButton from '../components/Home/Button'
+import HomeFooter from '../components/Home/Footer'
 
 interface Props {
   home: string,
@@ -37,8 +38,8 @@ export default function Home({ home }: Props) {
         <Header />
         <main>
           <header className="bg-clearsky flex flex-col items-center justify-center h-3/5 py-28">
-            <h1 className="text-6xl font-bold text-center pb-5">👋 Hello, I&apos;m Sriram.</h1>
-            <p className="text-xl font-medium text-center max-w-screen lg:max-w-3xl mx-auto">Hello There! I’m a product designer @&nbsp;
+            <h1 className="text-6xl font-bold text-center pb-5 text-black">👋 Hello, I&apos;m Sriram.</h1>
+            <p className="text-xl font-medium text-center max-w-screen lg:max-w-3xl mx-auto text-black">Hello There! I’m a product designer @&nbsp;
               <Link href="https://www.tcs.com/">
                 <a className="underline hover:text-white font-semibold" target="_blank" rel="noopener noreferrer">Tata Consultancy Services</a>
               </Link>
@@ -46,33 +47,37 @@ export default function Home({ home }: Props) {
             <HomeButton />
 
           </header>
-          <div className="bg-gray-900 flex items-center justify-center">
+          <div className="bg-black flex items-center justify-center">
             <HomeSocial />
           </div>
 
           {/* Case Studies Section */}
           <div className="my-16" id="casestudies">
-            <h2 className="max-w-screen lg:max-w-3xl text-3xl font-bold mx-auto text-center pb-2">Case Studies</h2>
-            <p className="text-lg font-medium text-center max-w-screen lg:max-w-3xl mx-auto">Detailed documentation of my works.</p>
+            <h2 className="max-w-screen lg:max-w-4xl text-3xl mx-auto text-center font-bold pb-2">Case Studies</h2>
             <HomeWork home={home} />
           </div>
 
           {/* Side Projects Section */}
-          <div className="my-16">
-            <h2 className="max-w-screen lg:max-w-3xl text-3xl font-bold mx-auto text-center pb-2">Side Projects</h2>
-            <p className="text-lg font-medium text-center max-w-screen lg:max-w-3xl mx-auto">My unofficial works, hobbies and experiments.</p>
+          <div className="my-16" >
             <HomeSideProject home={home} />
           </div>
 
           {/* Blogs Section */}
-          <div className="my-16">
-            <h2 className="max-w-screen lg:max-w-3xl text-3xl font-bold mx-auto text-center pb-2">Recent Writing</h2>
-            <p className="text-lg font-medium text-center max-w-screen lg:max-w-3xl mx-auto">Latest posts from my blog!</p>
+          <div className="mt-16 bg-clearsky h-3/5 py-20">
+            <div className="flex flex-row items-center justify-between max-w-screen lg:max-w-3xl py-4 mx-auto">
+              <h2 className="text-3xl font-bold text-black">Recent Writing</h2>
+              <Link href="/writing">
+                <a>
+                  <button className="bg-black text-white border-4 font-bold text-lg px-4 py-2 border-black hover:bg-white hover:text-black transition duration-300 ease-linear">View all posts&nbsp;&nbsp;✍️</button>
+                </a>
+              </Link>
+            </div>
             <HomeBlogList home={home} />
           </div>
 
         </main>
-        <h1>Welcome to my portfolio!</h1>
+        <HomeFooter />
+
 
       </Layout>
 

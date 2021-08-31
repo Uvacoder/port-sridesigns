@@ -15,7 +15,7 @@ export default function About() {
       </Head>
       <Header />
       <main>
-        <header className="bg-yellow-400 h-80 flex items-center">
+        <header className="bg-yellow-400 h-96 flex items-center">
           <div className="max-w-3xl mx-auto">
             <div className="space-y-4 text-center">
               <h1 className="text-7xl font-bold tracking-tighter">வணக்கம்.</h1>
