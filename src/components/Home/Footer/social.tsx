@@ -2,28 +2,38 @@ import Link from "next/link"
 
 export default function HomeFooterSocial() {
   return (
-    <div className="space-y-3">
-      <Link href="https://drive.google.com/file/d/1bzjQ13Z0JoyGdDPTlDz5MvbK25wYlG2_/view?usp=sharing">
-        <a className="text-base text-gray-200 font-normal hover:text-indigo-500 hover:underline cursor-pointer inline-flex items-center" target="_blank" rel="noopener noreferrer">📜 Resume</a>
-      </Link><br />
+    <div className="space-y-5 flex flex-col items-start">
 
       <Link href="https://twitter.com/designersriram">
         <a className="text-base text-gray-200 font-normal hover:text-indigo-500 cursor-pointer inline-flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-200 fill-current hover:text-indigo-500" viewBox="0 0 24 24"><path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 3.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 4.557z" />
           </svg>&nbsp;&nbsp;Twitter</a>
-      </Link><br />
+      </Link>
 
       <Link href="https://instagram.com/sriram015">
         <a className="text-base text-gray-200 font-normal hover:text-indigo-500 cursor-pointer inline-flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-200 fill-current hover:text-indigo-500" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
           </svg>&nbsp;&nbsp;Instagram</a>
-      </Link><br />
+      </Link>
 
       <Link href="https://www.linkedin.com/in/sriramvenugopal">
         <a className="text-base text-gray-200 font-normal hover:text-indigo-500 cursor-pointer inline-flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-200 fill-current hover:text-indigo-500" viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
           </svg>&nbsp;&nbsp;LinkedIn</a>
-      </Link><br />
+      </Link>
+
+      <Link href="https://www.linkedin.com/in/sriramvenugopal">
+        <a className="text-base text-gray-200 font-normal hover:text-indigo-500 cursor-pointer inline-flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-200 fill-current hover:text-indigo-500" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073a42.153 42.153 0 00-.767-1.68c2.31-1 4.165-2.358 5.548-4.082a9.863 9.863 0 012.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68a46.287 46.287 0 00-3.488-5.438A9.894 9.894 0 0112 2.087c2.275 0 4.368.779 6.043 2.072zM7.527 3.166a44.59 44.59 0 013.537 5.381c-2.43.715-5.331 1.082-8.684 1.105a9.931 9.931 0 015.147-6.486zM2.087 12l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48A9.865 9.865 0 012.087 12zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027a39.137 39.137 0 012.043 7.46c-3.349 1.291-6.953.666-9.641-1.433zm11.586.43a41.098 41.098 0 00-1.92-6.897c1.876-.265 3.94-.196 6.199.196a9.923 9.923 0 01-4.279 6.701z" /></svg>&nbsp;&nbsp;Dribbble</a>
+      </Link>
+
+      <Link href="https://www.linkedin.com/in/sriramvenugopal">
+        <a className="text-base text-gray-200 font-normal hover:text-indigo-500 cursor-pointer inline-flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-200 fill-current hover:text-indigo-500" viewBox="0 0 40 40" >
+            <path d="M19.9975 0C8.955 0 0 8.99 0 20.08C0 28.95 5.73 36.475 13.68 39.1325C14.68 39.3175 15.045 38.6975 15.045 38.165C15.045 37.6875 15.0275 36.425 15.0175 34.75C9.455 35.9625 8.28 32.0575 8.28 32.0575C7.3725 29.7375 6.06 29.12 6.06 29.12C4.2425 27.875 6.195 27.9 6.195 27.9C8.2025 28.0425 9.2575 29.97 9.2575 29.97C11.0425 33.0375 13.94 32.1525 15.08 31.6375C15.26 30.34 15.7775 29.455 16.35 28.9525C11.91 28.445 7.24 26.7225 7.24 19.03C7.24 16.8375 8.02 15.045 9.3 13.64C9.0925 13.1325 8.4075 11.09 9.495 8.3275C9.495 8.3275 11.175 7.7875 14.995 10.385C16.59 9.94 18.3 9.7175 20.0025 9.71C21.7 9.72 23.4125 9.94 25.01 10.3875C28.8275 7.79 30.505 8.33 30.505 8.33C31.595 11.095 30.91 13.135 30.705 13.6425C31.9875 15.0475 32.76 16.84 32.76 19.0325C32.76 26.745 28.085 28.4425 23.63 28.94C24.3475 29.56 24.9875 30.785 24.9875 32.6575C24.9875 35.3425 24.9625 37.5075 24.9625 38.165C24.9625 38.7025 25.3225 39.3275 26.3375 39.13C34.275 36.47 40 28.9475 40 20.08C40 8.99 31.045 0 19.9975 0Z" />
+          </svg>&nbsp;&nbsp;Github</a>
+      </Link>
+
     </div>
   )
 }

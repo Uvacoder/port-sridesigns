@@ -19,6 +19,17 @@ module.exports = {
         primary: ['"Work Sans"', 'Inter', 'system-ui'],
       },
 
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
+
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+
       typography: (theme) => ({
         lg: {
           css: {
