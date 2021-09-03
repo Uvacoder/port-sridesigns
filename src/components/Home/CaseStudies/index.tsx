@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HomeWork({ home }) {
   return (
-    <div className="max-w-screen-sm lg:max-w-3xl lg:grid grid-cols-2 gap-6 mx-6 md:mx-auto my-8">
+    <div className="max-w-screen-sm lg:max-w-screen-lg lg:grid grid-cols-2 gap-6 mx-6 md:mx-auto my-8">
       {home?.caseStudies?.map((project) => (
         <div key={project.slug}>
           <div className="py-4">

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HomeBlogList({ home }) {
   return (
-    <div className="max-w-screen lg:max-w-3xl mx-6 lg:mx-auto my-8 bg-white border-4 border-black  p-8 space-y-10">
+    <div className="max-w-screen lg:max-w-screen-lg mx-6 lg:mx-auto my-8 bg-white border-4 border-black px-10 py-8 space-y-10">
       {home?.blogPosts?.map((blog) => (
         <div key={blog.slug} className="space-y-2">
           <Link href={`/writing/${blog.slug}`}>
