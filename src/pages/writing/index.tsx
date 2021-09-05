@@ -5,20 +5,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { GetBlogPosts } from "../../graphql/data/posts/blogposts";
 
-interface Props {
-  slug: string
-  blogs: {
-    id: string
-    title: string
-    publishedAt: string
-    summary: string
-    bannerImage: {
-      url: string
-      width: number
-      height: number
-    }
-  }
-}
 
 export async function getStaticProps() {
   const blogs = await GetBlogPosts()
@@ -32,7 +18,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Writing({ blogs }: Props) {
+export default function Writing({ blogs }) {
   console.log(blogs);
   return (
     <Layout>

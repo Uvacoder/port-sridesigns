@@ -9,25 +9,6 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
 
-interface Props {
-  slug: string
-  blog: {
-    id: string
-    title: string
-    publishedAt: string
-    excerpt: string
-    coverImage: {
-      url: string
-      width: number
-      height: number
-    }
-    body: {
-      json: string
-      markdown: string
-    }
-  }
-  content: MDXRemoteSerializeResult
-}
 
 export async function getStaticPaths() {
   const data = await GetPostSlug()
@@ -53,7 +34,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function PostView({ blog, content }: Props) {
+export default function PostView({ blog, content }) {
   console.log(blog);
 
   return (

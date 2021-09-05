@@ -11,24 +11,7 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 interface Props {
   slug: string
-  casestudy: {
-    id: string
-    title: string
-    summary: string
-    publishedAt: string
-    bannerImage: {
-      url: string
-      width: number
-      height: number
-    }
-    content: {
-      json: string
-      markdown: string
-    }
-    role: string
-    techStack: string
-    duration: string
-  }
+
   source: MDXRemoteSerializeResult
 }
 
@@ -56,7 +39,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function CaseStudyView({ casestudy, source }: Props) {
+export default function CaseStudyView({ casestudy, source }) {
   return (
     <Layout>
       <Head>
