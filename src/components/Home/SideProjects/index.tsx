@@ -10,7 +10,7 @@ export default function HomeSideProject({ home }) {
         <div key={sproject.slug} className="space-y-2 lg:grid grid-cols-2 gap-2 mx-6 lg:mx-auto">
           <div className="col-span-1 flex flex-col justify-between">
             <div className="space-y-2">
-              <p className="text-sm text-yellow-600 font-semibold bg-yellow-100 py-1 px-4 inline-flex mb-4 rounded">👻&nbsp;&nbsp;Side Project!</p>
+              <p className="text-sm text-yellow-600 font-semibold bg-yellow-100 py-1 px-4 inline-flex mb-4 rounded">👻&nbsp;&nbsp;Side Project</p>
               <Link href={`/projects/${sproject.slug}`}>
                 <a>
                   <h4 className="text-2xl font-bold text-gray-800 hover:text-indigo-600">{sproject.title}</h4>

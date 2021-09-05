@@ -58,7 +58,7 @@ export default function Projects({ projects, sideprojects }: Props) {
           <p className="text-xl font-medium text-center max-w-2xl mx-auto">A catalogue of select works, side projects, and experiments.</p>
         </header>
 
-        <div className="max-w-screen-sm lg:max-w-3xl mx-6 md:mx-auto">
+        <div className="max-w-screen-sm lg:max-w-4xl mx-6 md:mx-auto">
 
           {/* Selected works section */}
 

@@ -37,7 +37,7 @@ export default function Home({ home }: Props) {
 
         <Header />
         <main className="lg:mt-14">
-          <header className="bg-clearsky flex flex-col items-center justify-center h-3/5 py-28">
+          <header className="bg-indigo-500 flex flex-col items-center justify-center h-3/5 py-28">
             <div className="inline-flex space-x-4 mx-6 lg:mx-auto items-center">
               <span className="text-6xl font-bold text-center pb-5 animate-wiggle">👋</span>
               <h1 className="text-6xl font-bold text-left lg:text-center pb-5 text-black">Hello, I&apos;m Sriram.</h1>
@@ -71,7 +71,7 @@ export default function Home({ home }: Props) {
               <h2 className="text-3xl font-bold text-black">Recent Writing</h2>
               <Link href="/writing">
                 <a>
-                  <button className="bg-black text-white border-4 font-bold text-lg px-4 py-2 border-black hover:bg-white hover:text-black transition duration-300 ease-linear">View all posts&nbsp;&nbsp;✍️</button>
+                  <button className="bg-black text-white border-4 font-bold text-lg px-4 py-2 border-black hover:bg-white hover:text-black transition duration-300 ease-linear">Read all posts&nbsp;&nbsp;✍️</button>
                 </a>
               </Link>
             </div>

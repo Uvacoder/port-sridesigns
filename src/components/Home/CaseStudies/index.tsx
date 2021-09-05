@@ -5,21 +5,25 @@ import Image from "next/image";
 export default function HomeWork({ home }) {
   return (
     <div className="max-w-screen-sm lg:max-w-screen-lg mx-6 md:mx-auto my-8">
-      <p className="py-1 px-4 inline-flex mb-4 rounded text-sm font-semibold mx-6 lg:mx-auto text-purple-500 bg-purple-100">🤩&nbsp;&nbsp;Selected Works</p>
+      <p className="py-1 px-4 inline-flex mb-4 rounded text-sm font-semibold mx-6 lg:mx-auto text-purple-500 bg-purple-100">🤩&nbsp;&nbsp;Select Projects</p>
 
       <div className="lg:grid grid-cols-2 gap-6">
 
         {home?.caseStudies?.map((project) => (
           <div key={project.slug}>
             <div className="py-4 overflow-hidden">
-              <Image
-                src={project.bannerImage.url}
-                alt={project.title}
-                width={project.bannerImage.width}
-                height={project.bannerImage.height}
-                objectFit="cover"
-                className="transition-all duration-500 ease-in-out transform hover:scale-125"
-              />
+              <Link href={`/projects/${project.slug}`}>
+                <a>
+                  <Image
+                    src={project.bannerImage.url}
+                    alt={project.title}
+                    width={project.bannerImage.width}
+                    height={project.bannerImage.height}
+                    objectFit="cover"
+                    className="transition-all duration-500 ease-in-out transform hover:scale-125"
+                  />
+                </a>
+              </Link>
 
             </div>
 
