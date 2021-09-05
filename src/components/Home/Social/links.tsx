@@ -7,7 +7,7 @@ export default function HomeSocialLinks() {
 
       <Link href="mailto:msgsrive@gmail.com">
         <a target="_blank" rel="noopener noreferrer" className="cursor-pointer">
-          <svg className="w-7 h-7 text-white hover:text-indigo-600 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+          <svg className="w-7 h-7 text-gray-900 hover:text-yellow-400 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
         </a>
       </Link>
 
@@ -43,7 +43,7 @@ export default function HomeSocialLinks() {
 
       <Link href="https://www.github.com/in/sridesigns">
         <a target="_blank" rel="noopener noreferrer" className="cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white fill-current hover:text-yellow-400" viewBox="0 0 40 40" >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-900 fill-current hover:text-yellow-400" viewBox="0 0 40 40" >
             <path d="M19.9975 0C8.955 0 0 8.99 0 20.08C0 28.95 5.73 36.475 13.68 39.1325C14.68 39.3175 15.045 38.6975 15.045 38.165C15.045 37.6875 15.0275 36.425 15.0175 34.75C9.455 35.9625 8.28 32.0575 8.28 32.0575C7.3725 29.7375 6.06 29.12 6.06 29.12C4.2425 27.875 6.195 27.9 6.195 27.9C8.2025 28.0425 9.2575 29.97 9.2575 29.97C11.0425 33.0375 13.94 32.1525 15.08 31.6375C15.26 30.34 15.7775 29.455 16.35 28.9525C11.91 28.445 7.24 26.7225 7.24 19.03C7.24 16.8375 8.02 15.045 9.3 13.64C9.0925 13.1325 8.4075 11.09 9.495 8.3275C9.495 8.3275 11.175 7.7875 14.995 10.385C16.59 9.94 18.3 9.7175 20.0025 9.71C21.7 9.72 23.4125 9.94 25.01 10.3875C28.8275 7.79 30.505 8.33 30.505 8.33C31.595 11.095 30.91 13.135 30.705 13.6425C31.9875 15.0475 32.76 16.84 32.76 19.0325C32.76 26.745 28.085 28.4425 23.63 28.94C24.3475 29.56 24.9875 30.785 24.9875 32.6575C24.9875 35.3425 24.9625 37.5075 24.9625 38.165C24.9625 38.7025 25.3225 39.3275 26.3375 39.13C34.275 36.47 40 28.9475 40 20.08C40 8.99 31.045 0 19.9975 0Z" />
           </svg>
         </a>

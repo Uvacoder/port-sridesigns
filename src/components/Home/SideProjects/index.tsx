@@ -25,7 +25,7 @@ export default function HomeSideProject({ home }) {
               </a>
             </Link>
           </div>
-          <div>
+          <div className="border-4 border-transparent hover:border-black">
             <Image
               src={sproject.coverImage.url}
               alt={sproject.title}

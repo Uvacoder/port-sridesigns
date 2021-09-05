@@ -52,13 +52,13 @@ export default function Projects({ projects, sideprojects }: Props) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
-      <main>
+      <main className="md:mt-16">
         <header className="h-80 flex flex-col items-center justify-center">
           <h1 className="text-6xl text-center font-bold pb-5">Projects</h1>
           <p className="text-xl font-medium text-center max-w-2xl mx-auto">A catalogue of select works, side projects, and experiments.</p>
         </header>
 
-        <div className="max-w-screen-sm md:max-w-xl lg:max-w-3xl mx-auto">
+        <div className="max-w-screen-sm lg:max-w-3xl mx-6 md:mx-auto">
 
           {/* Selected works section */}
 
@@ -74,6 +74,7 @@ export default function Projects({ projects, sideprojects }: Props) {
 
 
         </div>
+
       </main>
       <Footer />
 

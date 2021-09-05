@@ -36,14 +36,14 @@ export default function Home({ home }: Props) {
         </Head>
 
         <Header />
-        <main>
+        <main className="lg:mt-14">
           <header className="bg-clearsky flex flex-col items-center justify-center h-3/5 py-28">
-            <div className="inline-flex space-x-4">
+            <div className="inline-flex space-x-4 mx-6 lg:mx-auto items-center">
               <span className="text-6xl font-bold text-center pb-5 animate-wiggle">👋</span>
-              <h1 className="text-6xl font-bold text-center pb-5 text-black">Hello, I&apos;m Sriram.</h1>
+              <h1 className="text-6xl font-bold text-left lg:text-center pb-5 text-black">Hello, I&apos;m Sriram.</h1>
             </div>
 
-            <p className="text-xl font-medium text-center max-w-screen lg:max-w-3xl mx-auto text-black">Hello There! I’m a product designer @&nbsp;
+            <p className="text-xl font-medium text-left lg:text-center max-w-screen lg:max-w-3xl mx-6 lg:mx-auto text-black">Hello There! I’m a product designer @&nbsp;
               <Link href="https://www.tcs.com/">
                 <a className="underline hover:text-white font-semibold" target="_blank" rel="noopener noreferrer">Tata Consultancy Services</a>
               </Link>
@@ -51,13 +51,12 @@ export default function Home({ home }: Props) {
             <HomeButton />
 
           </header>
-          <div className="bg-black flex items-center justify-center">
+          <div className="bg-gray-100 flex items-center justify-center">
             <HomeSocial />
           </div>
 
           {/* Case Studies Section */}
-          <div className="mt-16 mb-24" id="casestudies">
-            <h2 className="max-w-screen lg:max-w-screen-lg text-3xl mx-auto text-center font-bold pb-2">Case Studies</h2>
+          <div className="mt-16 mb-12 lg:mb-24" id="casestudies">
             <HomeWork home={home} />
           </div>
 
@@ -67,8 +66,8 @@ export default function Home({ home }: Props) {
           </div>
 
           {/* Blogs Section */}
-          <div className="mt-16 bg-clearsky h-3/5 py-20">
-            <div className="flex flex-row items-center justify-between max-w-screen lg:max-w-screen-lg py-4 mx-auto">
+          <div className="bg-clearsky h-3/5 py-20">
+            <div className="flex flex-row items-center justify-between max-w-screen-sm lg:max-w-screen-lg py-4 mx-6 md:mx-auto">
               <h2 className="text-3xl font-bold text-black">Recent Writing</h2>
               <Link href="/writing">
                 <a>

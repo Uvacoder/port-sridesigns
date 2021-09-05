@@ -16,7 +16,7 @@ module.exports = {
       },
 
       fontFamily: {
-        primary: ['"Work Sans"', 'Inter', 'system-ui'],
+        primary: ['"Work Sans"', 'Karla', 'system-ui'],
       },
 
       keyframes: {

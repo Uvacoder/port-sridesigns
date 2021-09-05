@@ -16,10 +16,10 @@ export default function About() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
-      <main>
-        <header className="bg-yellow-400 h-96 flex items-center ">
-          <div className="max-w-screen md:max-w-screen-md lg:max-w-screen-lg  mx-6 md:mx-auto lg:grid grid-cols-3 gap-6">
-            <div className="space-y-4 col-span-2 px-6">
+      <main className="lg:mt-14">
+        <header className="bg-yellow-400 h-3/5 py-20 flex items-center ">
+          <div className="max-w-screen md:max-w-screen-md lg:max-w-screen-lg mx-6 md:mx-auto lg:grid grid-cols-3 gap-6">
+            <div className="space-y-4 col-span-2 lg:px-6">
               <h1 className="text-7xl font-bold tracking-tighter text-left">வணக்கம்.</h1>
               <p className="text-lg font-medium text-left pb-6 leading-relaxed">I&apos;m a product designer based out of Chennai 🇮🇳. <br /> I&apos;m working with&nbsp;
                 <Link href="https://www.tcs.com/">
@@ -31,16 +31,19 @@ export default function About() {
                 </a>
               </Link>
             </div>
-            <Image
-              src={profilePic}
-              alt="This is Meee!"
-              width={225}
-              height={225}
-              objectFit="contain"
-            />
+            <div className="mt-8 lg:mt-0">
+              <Image
+                src={profilePic}
+                alt="This is Meee!"
+                width={225}
+                height={225}
+                objectFit="contain"
+              />
+            </div>
+
           </div>
         </header>
-        <div className="max-w-screen-sm md:max-w-screen-md mx-auto py-10 space-y-8">
+        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto py-10 space-y-8">
           <div>
             <p className="text-lg font-medium pb-4">Apart from creating in-house products, we collaborate with global clients to <em className="font-semibold italic text-gray-800">&lsquo;create seamless and cohesive employee experiences&rsquo;</em> across enterprise applications.</p>
             <Link href="https://www.tcs.com/reimagining-research/the-digital-workplace">
@@ -64,7 +67,7 @@ export default function About() {
               <Link href="https://www.tcs.com/reimagining-research/the-digital-workplace">
                 <a className="text-indigo-600 font-semibold hover:underline hover:text-indigo-400 text-lg" target="_blank" rel="noopener noreferrer">Fresco: Reimagining the Workplace</a>
               </Link>
-              <p className="text-gray-400">|</p>
+              <p className="text-gray-400 hidden md:block">|</p>
               <Link href="https://www.tcs.com/reimagining-research/the-digital-workplace">
                 <a className="text-indigo-600 font-semibold hover:underline hover:text-indigo-400 text-lg" target="_blank" rel="noopener noreferrer">O365 Onboarding Self Service Portal</a>
               </Link>
