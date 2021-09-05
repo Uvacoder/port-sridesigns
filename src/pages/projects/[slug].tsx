@@ -60,7 +60,7 @@ export default function CaseStudyView({ casestudy, source }: Props) {
   return (
     <Layout>
       <Head>
-        <title>Case Study</title>
+        <title>{casestudy.title}</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
       <ScrollToTop />

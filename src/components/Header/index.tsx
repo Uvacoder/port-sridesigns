@@ -62,7 +62,9 @@ const Header = () => {
       <div className="hidden lg:grid fixed bg-white top-0 z-10 w-full border-b border-gray-200 py-6">
         <div className="mx-auto grid grid-cols-4 gap-8 max-w-screen-lg">
           <div className="col-span-1 items-center ">
-            <MyLogo />
+            <Link href="/">
+              <a><MyLogo /></a>
+            </Link>
           </div>
           <div className="col-span-2 flex flex-row space-x-24 items-center justify-center">
             {

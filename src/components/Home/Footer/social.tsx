@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function HomeFooterSocial() {
   return (
-    <div className="space-y-5 flex flex-col items-start">
+    <div className="space-y-0 md:space-y-5 flex flex-row md:flex-col space-x-6 md:space-x-0">
 
       <Link href="https://twitter.com/designersriram">
         <a className="text-base text-gray-200 font-normal hover:text-indigo-500 cursor-pointer inline-flex items-center">

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function HomeSocialLinks() {
   return (
-    <div className="flex items-center space-x-24 justify-end">
+    <div className="flex items-center space-x-16 lg:space-x-24 justify-end">
       {/*svg for email icon*/}
 
       <Link href="mailto:msgsrive@gmail.com">

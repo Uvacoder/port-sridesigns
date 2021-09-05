@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HomeSideProject({ home }) {
   return (
-    <div className="max-w-screen lg:max-w-screen-lg mx-auto">
+    <div className="max-w-screen-sm lg:max-w-screen-lg mx-auto">
       {home?.sideProjects?.map((sproject) => (
         <div key={sproject.slug} className="space-y-2 lg:grid grid-cols-2 gap-2 mx-6 lg:mx-auto">
           <div className="col-span-1 flex flex-col justify-between">

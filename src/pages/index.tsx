@@ -32,7 +32,7 @@ export default function Home({ home }: Props) {
         <Head>
           <title>Home</title>
           <meta name="description" content="Personal website of Sriram Venugopal" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
 
         <Header />

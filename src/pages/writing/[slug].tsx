@@ -59,7 +59,7 @@ export default function PostView({ blog, content }: Props) {
   return (
     <Layout>
       <Head>
-        <title>Writing</title>
+        <title>{blog.title}</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
