@@ -7,6 +7,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Layout from "../../components/Layout";
 import Head from "next/head";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 interface Props {
   slug: string
@@ -62,6 +63,7 @@ export default function CaseStudyView({ casestudy, source }: Props) {
         <title>Case Study</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <ScrollToTop />
       <Header />
       <main className="md:mt-28">
         <header className="flex-col mt-12 mb-10 space-y-4 justify-center">

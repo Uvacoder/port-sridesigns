@@ -17,7 +17,7 @@ export default function About() {
       </Head>
       <Header />
       <main className="lg:mt-14">
-        <header className="bg-yellow-400 h-3/5 py-20 flex items-center ">
+        <header className="bg-yellow-400 h-3/5 py-20 flex items-center bg-hideout bg-repeat">
           <div className="max-w-screen md:max-w-screen-md lg:max-w-screen-lg mx-6 md:mx-auto lg:grid grid-cols-3 gap-6">
             <div className="space-y-4 col-span-2 lg:px-6">
               <h1 className="text-7xl font-bold tracking-tighter text-left">வணக்கம்.</h1>

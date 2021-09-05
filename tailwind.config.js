@@ -6,6 +6,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        'objects': "url('/images/bg-objects.svg')",
+        'plus': "url('/images/bg-plus.svg')",
+        'hideout': "url('/images/bg-hideout.svg')",
+        'wiggle': "url('/images/bg-wiggle.svg')",
+      },
       colors: {
         gray: colors.trueGray,
         rose: colors.rose,

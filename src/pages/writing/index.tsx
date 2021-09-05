@@ -42,7 +42,7 @@ export default function Writing({ blogs }: Props) {
       </Head>
       <Header />
       <main className="lg:mt-14">
-        <header className="bg-rose-400 h-3/5 py-24 flex flex-col items-center justify-center">
+        <header className="bg-rose-400 h-3/5 py-24 flex flex-col items-center justify-center bg-plus bg-repeat">
           <h1 className="text-6xl text-center font-bold pb-5">Writing</h1>
           <p className="text-xl font-medium text-center max-w-xl mx-auto">Sharing my thoughts on user experience, product design,
             art and tech.</p>

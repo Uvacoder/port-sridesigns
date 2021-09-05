@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/Layout";
-import ArrowLeft from "../../assets/arrow-left";
 import Calendar from "../../assets/calendar";
 import BlogDivider from "../../components/BlogDivider";
 import { GetPost, GetPostSlug } from "../../graphql/data/posts/post";
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 interface Props {
   slug: string
@@ -63,13 +63,15 @@ export default function PostView({ blog, content }: Props) {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
+      <ScrollToTop />
+      <div className="h-1 bg-gradient-to-r from-red-500 via-pink-500 to-purple-400 w-full"></div>
+
       <div className="max-w-screen-md lg:max-w-6xl mx-auto">
         <Link href="/writing">
           <a>
-            <nav className="max-w-screen-md inline-flex space-x-2 my-10 items-center">
-              <ArrowLeft />
-              <p className="font-medium text-gray-800 pb-1">Back to Writing</p>
-            </nav>
+            <button className="max-w-screen-md inline-flex space-x-2 my-10 items-center">
+              <p className="font-medium text-gray-800 pb-1 hover:text-indigo-600">&larr;&nbsp;&nbsp;Back to Writing</p>
+            </button>
           </a>
         </Link>
         <main className="max-w-screen-md mx-auto">

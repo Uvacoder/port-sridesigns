@@ -51,7 +51,7 @@ export default function Home({ home }: Props) {
             <HomeButton />
 
           </header>
-          <div className="bg-gray-100 flex items-center justify-center">
+          <div className="bg-gray-100 flex items-center">
             <HomeSocial />
           </div>
 
@@ -66,8 +66,8 @@ export default function Home({ home }: Props) {
           </div>
 
           {/* Blogs Section */}
-          <div className="bg-clearsky h-3/5 py-20">
-            <div className="flex flex-row items-center justify-between max-w-screen-sm lg:max-w-screen-lg py-4 mx-6 md:mx-auto">
+          <div className="bg-indigo-500 h-3/5 py-20 bg-objects bg-repeat">
+            <div className="flex flex-row items-center justify-between max-w-screen-sm lg:max-w-screen-lg py-4 mx-6 md:mx-auto z-10">
               <h2 className="text-3xl font-bold text-black">Recent Writing</h2>
               <Link href="/writing">
                 <a>
@@ -84,7 +84,7 @@ export default function Home({ home }: Props) {
 
       </Layout>
 
-    </div>
+    </div >
   )
 }
 
