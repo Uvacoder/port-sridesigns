@@ -48,12 +48,12 @@ export default function CaseStudyView({ casestudy, source }) {
       </Head>
       <ScrollToTop />
       <Header />
-      <main className="md:mt-28">
+      <main className="mt-20 lg:mt-28">
         <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
-          <h2 className="text-5xl text-gray-800 font-bold text-center">{casestudy.title}</h2>
-          <p className="text-lg  font-medium text-center text-gray-700 max-w-2xl mx-auto">{casestudy.summary}</p>
+          <h2 className="text-4xl md:text-5xl text-gray-800 font-bold text-center">{casestudy.title}</h2>
+          <p className="text-lg font-medium text-center text-gray-700 max-w-screen-sm mx-auto">{casestudy.summary}</p>
         </header>
-        <div className="max-w-3xl mx-auto my-5 text-center">
+        <div className="max-w-screen md:max-w-screen-md mx-auto my-5 text-center">
           <Image
             src={casestudy.bannerImage.url}
             alt={casestudy.title}
@@ -62,7 +62,7 @@ export default function CaseStudyView({ casestudy, source }) {
             objectFit="cover"
           />
         </div>
-        <div className="max-w-3xl mx-auto lg:grid grid-cols-3 gap-6">
+        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto lg:grid grid-cols-3 gap-6">
           <div className="mx-auto my-5">
             <h3 className="text-lg font-bold">Activities</h3>
             {casestudy.role.map((activity: string) => (
@@ -93,7 +93,7 @@ export default function CaseStudyView({ casestudy, source }) {
 
 
 
-        <div className="prose prose-lg my-10 mx-auto">
+        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto prose prose-lg my-10">
           <MDXRemote {...source} />
         </div>
       </main>

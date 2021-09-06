@@ -26,7 +26,7 @@ export default function About() {
                   <a className="underline hover:text-blue-800 font-semibold" target="_blank" rel="noopener noreferrer">TCS</a>
                 </Link>&nbsp;since 2011 and currently part of the &quot;Digital Workplace&quot; business unit.</p>
               <Link href="https://drive.google.com/file/d/1bzjQ13Z0JoyGdDPTlDz5MvbK25wYlG2_/view?usp=sharing">
-                <a>
+                <a target="_blank" rel="noopener noreferrer">
                   <button className="bg-gray-900 py-2 px-8 border-4 border-gray-900 text-white hover:bg-white hover:text-gray-900 font-bold text-lg transition duration-200 ease-linear">View my resume&nbsp;&nbsp;📜</button>
                 </a>
               </Link>

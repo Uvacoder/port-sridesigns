@@ -47,12 +47,12 @@ export default function SideProjectView({ sideproject, source }) {
       </Head>
       <ScrollToTop />
       <Header />
-      <main className="md:mt-28">
+      <main className="mt-20 lg:mt-28">
         <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
           <h2 className="text-5xl text-gray-800 font-bold text-center">{sideproject.title}</h2>
           <p className="text-lg  font-medium text-center text-gray-700 max-w-2xl mx-auto">{sideproject.summary}</p>
         </header>
-        <div className="max-w-3xl mx-auto my-5 text-center">
+        <div className="max-w-screen md:max-w-screen-md mx-auto my-5 text-center">
           <Image
             src={sideproject.coverImage.url}
             alt={sideproject.title}
@@ -61,7 +61,7 @@ export default function SideProjectView({ sideproject, source }) {
             objectFit="cover"
           />
         </div>
-        <div className="max-w-3xl mx-auto lg:grid grid-cols-3 gap-6">
+        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto lg:grid grid-cols-3 gap-6">
           <div className="mx-auto my-5">
             <h3 className="text-lg font-bold">Activities</h3>
             {sideproject.activities.map((activity: string) => (
@@ -92,7 +92,7 @@ export default function SideProjectView({ sideproject, source }) {
 
 
 
-        <div className="prose prose-lg my-10 mx-auto">
+        <div className="max-w-screen-sm md:max-w-screen-md prose prose-lg my-10 mx-6 md:mx-auto">
           <MDXRemote {...source} />
         </div>
       </main>

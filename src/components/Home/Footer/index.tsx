@@ -31,7 +31,7 @@ export default function HomeFooter() {
           </p>
         </div>
         <div className="col-span-1">
-          <h3 className="text-lg font-bold text-gray-200 pb-6">Social</h3>
+          <h3 className="text-lg font-bold text-gray-200 pb-6 hidden lg:block">Social</h3>
           <HomeFooterSocial />
         </div>
 

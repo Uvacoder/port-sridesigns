@@ -46,18 +46,18 @@ export default function PostView({ blog, content }) {
       </Head>
 
       <ScrollToTop />
-      <div className="h-1 bg-gradient-to-r from-red-500 via-pink-500 to-purple-400 w-full"></div>
+      <div className="h-1 bg-gradient-to-r from-red-500 via-pink-500 to-purple-400 max-w-screen"></div>
 
-      <div className="max-w-screen-md lg:max-w-6xl mx-auto">
+      <div className="max-w-screen md:max-w-screen-md mx-6 md:mx-auto">
         <Link href="/writing">
           <a>
-            <button className="max-w-screen-md inline-flex space-x-2 my-10 items-center">
+            <button className="inline-flex space-x-2 my-10 items-center">
               <ArrowLeft />
               <p className="font-medium text-gray-800 pb-1 hover:text-indigo-600">Back to Writing</p>
             </button>
           </a>
         </Link>
-        <main className="max-w-screen-md mx-auto">
+        <main>
           <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
             <h2 className="text-5xl text-gray-800 font-bold text-center">{blog.title}</h2>
             <p className="text-lg text-center text-gray-700">{blog.excerpt}</p>
