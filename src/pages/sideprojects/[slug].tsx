@@ -11,13 +11,12 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 interface Props {
   slug: string
-
   source: MDXRemoteSerializeResult
 }
 
 export async function getStaticPaths() {
   const slugRes = await GetSideProjectSlug()
-  const slugs = slugRes.caseStudies
+  const slugs = slugRes.sideProjects
 
   return {
     paths: slugs.map((slug) => ({
@@ -34,7 +33,7 @@ export async function getStaticProps({ params }) {
     revalidate: 60 * 60,
     props: {
       sideproject: work.sideProjects[0],
-      source: await serialize(work.sideProjects[0].content.markdown)
+      source: await serialize(work.sideProjects[0].body.markdown)
     },
   }
 }

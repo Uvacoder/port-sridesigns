@@ -8,6 +8,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import ArrowLeft from "../../assets/arrow-left";
 
 
 export async function getStaticPaths() {
@@ -51,7 +52,8 @@ export default function PostView({ blog, content }) {
         <Link href="/writing">
           <a>
             <button className="max-w-screen-md inline-flex space-x-2 my-10 items-center">
-              <p className="font-medium text-gray-800 pb-1 hover:text-indigo-600">&larr;&nbsp;&nbsp;Back to Writing</p>
+              <ArrowLeft />
+              <p className="font-medium text-gray-800 pb-1 hover:text-indigo-600">Back to Writing</p>
             </button>
           </a>
         </Link>
