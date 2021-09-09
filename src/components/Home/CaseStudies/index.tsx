@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HomeWork({ home }) {
   return (
-    <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto my-8">
+    <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto">
       <p className="py-1 px-4 inline-flex mb-4 rounded text-sm font-semibold text-purple-500 dark:text-purple-300 bg-purple-100 dark:bg-purple-900 dark:bg-opacity-30">🤩&nbsp;&nbsp;Select Projects</p>
 
       <div className="lg:grid grid-cols-2 gap-6">

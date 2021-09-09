@@ -16,7 +16,7 @@ export default function About() {
         <link rel="icon" href="/favicons/smileyface.png" />
       </Head>
       <Header />
-      <main className="mt-14 max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto py-6">
+      <main className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto py-16">
         <header className="space-y-4 pt-16 pb-10">
           <Image
             src={profilePic}

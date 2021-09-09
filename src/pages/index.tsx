@@ -36,8 +36,8 @@ export default function Home({ home }: Props) {
         </Head>
 
         <Header />
-        <main className="mt-14">
-          <header className="max-w-screen md:max-w-screen-md mx-6 md:mx-auto py-8">
+        <main>
+          <header className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto py-32">
             <p className="text-6xl font-bold text-left py-5 inline-flex animate-wiggle">👋</p>
             <h1 className="text-4xl font-bold text-left leading-snug py-5">Hello, I&apos;m Sriram. I&apos;m a product designer, maker, and illustrator from Chennai.<br /> I &apos;m currently designing products &amp; experiences for&nbsp;
               <Link href="https://www.tcs.com/">

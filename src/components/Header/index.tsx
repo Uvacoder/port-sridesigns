@@ -25,7 +25,7 @@ const Header = () => {
         .filter((r) => r.path !== '/')
         .find((r) => currPathName.includes(r.path))?.label
   return (
-    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 md:z-auto md:relative dark:border-opacity-10 border-opacity-20 md:bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-40 filter-blur" role="navigation">
+    <div className="fixed top-0 z-10 w-full py-2 bg-white border-b border-gray-400 lg:z-auto lg:relative dark:border-opacity-10 border-opacity-20 md:bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-40 filter-blur" role="navigation">
 
       {/* Mobile Navigation Starts */}
       <div className="grid grid-cols-1 lg:hidden">
@@ -58,7 +58,7 @@ const Header = () => {
       {/* Mobile Navigation Ends */}
 
       {/* Desktop Navigation Starts */}
-      <div className="hidden lg:grid fixed bg-white dark:bg-black top-0 z-10 w-full border-b border-gray-200 dark:border-gray-900 py-4">
+      <div className="hidden lg:grid fixed bg-white dark:bg-black dark:bg-opacity-90 top-0 z-10 w-full border-b border-gray-200 dark:border-gray-900 py-4">
         <div className="mx-auto grid grid-cols-4 gap-8 max-w-screen-lg">
           <div className="col-span-1 items-center ">
             <Link href="/">
