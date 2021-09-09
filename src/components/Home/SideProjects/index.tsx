@@ -21,7 +21,7 @@ export default function HomeSideProject({ home }) {
             </div>
             <Link href={`/sideprojects/${sproject.slug}`}>
               <a>
-                <button className="text-base font-semibold text-indigo-600 dark:text-indigo-500 hover:text-indigo-800 dark:hover:text-sky-600 hover:underline pb-4">Read More</button>
+                <button className="text-base font-semibold text-indigo-600 dark:text-sky-400 hover:text-indigo-800 dark:hover:text-sky-600 hover:underline pb-4">Read More</button>
               </a>
             </Link>
           </div>

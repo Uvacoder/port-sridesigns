@@ -77,13 +77,12 @@ module.exports = {
             h2: {
               fontSize: '1.5rem',
               fontWeight: '700',
+              color: theme('colors.gray.50')
             },
             h3: {
               fontSize: '1.25rem',
               fontWeight: '700',
-            },
-            strong: {
-              fontWeight: '700',
+              color: theme('colors.gray.50')
             },
             strong: {
               color: theme('colors.gray.50'),
