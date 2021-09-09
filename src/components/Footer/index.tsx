@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="md:flex text-gray-500 font-normal text-sm justify-center py-5">
           <p>Sriram &nbsp;&nbsp;|&nbsp;&nbsp;Feel free to drop a ‘hello’ @&nbsp;</p>
           <Link href="mailto:msgsrive@gmail.com">
-            <a className="hover:text-indigo-600 hover:underline font-medium">msgsrive@gmail.com</a>
+            <a className="hover:text-indigo-600 dark:hover:text-sky-400 hover:underline font-medium">msgsrive@gmail.com</a>
           </Link>
         </div>
         <div className="py-2 md:py-5">

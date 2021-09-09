@@ -12,9 +12,9 @@ export default function HomeFooter() {
               <a className="text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline font-semibold">msgsrive@gmail.com</a>
             </Link></p>
           <p className="text-base text-gray-400 font-normal">I designed & developed this site using&nbsp;
-            <Link href="https://nextjs.org/"><a className="text-base font-semibold text-gray-300 hover:text-indigo-500 hover:underline">Next.js</a></Link>,&nbsp;
-            <Link href="https://tailwindcss.com/"><a className="text-base font-semibold text-gray-300 hover:text-indigo-500 hover:underline">Tailwind CSS</a></Link>,&nbsp;
-            <Link href="https://graphcms.com/"><a className="text-base font-semibold text-gray-300 hover:text-indigo-500 hover:underline">Graph CMS</a></Link>,
+            <Link href="https://nextjs.org/"><a className="text-base font-semibold text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline">Next.js</a></Link>,&nbsp;
+            <Link href="https://tailwindcss.com/"><a className="text-base font-semibold text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline">Tailwind CSS</a></Link>,&nbsp;
+            <Link href="https://graphcms.com/"><a className="text-base font-semibold text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline">Graph CMS</a></Link>,
             &amp;&nbsp;lots of ☕️
           </p>
           <p className="text-base text-gray-400 font-normal">Typeset is&nbsp;
