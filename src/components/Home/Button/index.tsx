@@ -1,19 +1,18 @@
 import Link from "next/link"
+import HomeSocial from "../Social"
 
 
 export default function HomeButton() {
   return (
-    <div className="flex space-x-8 mt-8 mx-6 md:mx-auto">
-      <Link href="#casestudies">
-        <a>
-          <button className="bg-gray-900 py-3 px-8 border-4 border-gray-900 text-white hover:bg-white hover:text-gray-900 font-bold text-lg text-center transition duration-200 ease-linear">View my works&nbsp;👇</button>
-        </a>
-      </Link>
+    <div className="md:inline-flex space-x-0 md:space-x-12 my-8">
       <Link href="/about">
         <a>
-          <button className="bg-white py-3 px-8 border-4 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-lg text-center transition duration-200 ease-linear">Read more about me&nbsp;😀</button>
+          <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 rounded-lg flex items-center p-0.5 hover:shadow-lg">
+            <button className="bg-white dark:bg-darkblack py-2 px-6 text-gray-900 dark:text-gray-50 hover:text-indigo-500 dark:hover:text-sky-400 font-bold text-base text-center transition duration-200 ease-linear rounded-md w-full">Read more about me&nbsp;&nbsp;😀</button>
+          </div>
         </a>
       </Link>
+      <HomeSocial />
     </div>
   )
 }

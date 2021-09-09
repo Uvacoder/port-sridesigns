@@ -44,14 +44,14 @@ export default function CaseStudyView({ casestudy, source }) {
     <Layout>
       <Head>
         <title>{casestudy.title}</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicons/manlaptop.png" />
       </Head>
       <ScrollToTop />
       <Header />
       <main className="mt-20 lg:mt-28">
-        <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
-          <h2 className="text-4xl md:text-5xl text-gray-800 font-bold text-center">{casestudy.title}</h2>
-          <p className="text-lg font-medium text-center text-gray-700 max-w-screen-sm mx-auto">{casestudy.summary}</p>
+        <header className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto space-y-4 py-10">
+          <h2 className="text-4xl text-gray-900 dark:text-gray-50 font-bold text-center">{casestudy.title}</h2>
+          <p className="text-lg font-medium text-center text-gray-700 dark:text-gray-400">{casestudy.summary}</p>
         </header>
         <div className="max-w-screen md:max-w-screen-md mx-auto my-5 text-center">
           <Image
@@ -62,38 +62,35 @@ export default function CaseStudyView({ casestudy, source }) {
             objectFit="cover"
           />
         </div>
-        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto lg:grid grid-cols-3 gap-6">
+        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto md:grid grid-cols-3 gap-4">
           <div className="mx-auto my-5">
-            <h3 className="text-lg font-bold">Activities</h3>
+            <h3 className="text-lg font-bold pb-2">Activities</h3>
             {casestudy.role.map((activity: string) => (
               <ul key={activity}>
-                <li className="text-base py-1 list-disc list-inside">
+                <li className="text-base py-1 list-disc list-inside font-medium">
                   {activity}
                 </li>
               </ul>
             ))}
           </div>
           <div className="mx-auto my-5">
-            <h3 className="text-lg font-bold">Tech Stack</h3>
+            <h3 className="text-lg font-bold pb-2">Tech Stack</h3>
             {casestudy.techStack.map((stack: string) => (
               <ul key={stack}>
-                <li className="text-base py-1 list-disc list-inside">
+                <li className="text-base py-1 list-disc list-inside font-medium">
                   {stack}
                 </li>
               </ul>
             ))}
           </div>
           <div className="mx-auto my-5">
-            <h3 className="text-lg font-bold">Duration</h3>
-            <p className="text-base">{casestudy.duration}</p>
-
+            <h3 className="text-lg font-bold pb-2">Duration</h3>
+            <p className="text-base font-medium">{casestudy.duration}</p>
           </div>
-
         </div>
 
 
-
-        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto prose prose-lg my-10">
+        <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto prose prose-lg dark:prose-dark text-gray-900 dark:text-gray-100 my-10">
           <MDXRemote {...source} />
         </div>
       </main>

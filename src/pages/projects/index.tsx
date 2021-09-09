@@ -49,30 +49,25 @@ export default function Projects({ projects, sideprojects }: Props) {
     <Layout>
       <Head>
         <title>Projects</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicons/manlaptop.png" />
       </Head>
       <Header />
-      <main className="md:mt-16">
-        <header className="h-80 flex flex-col items-center justify-center">
-          <h1 className="text-6xl text-center font-bold pb-5">Projects</h1>
-          <p className="text-xl font-medium text-center max-w-2xl mx-auto">A catalogue of select works, side projects, and experiments.</p>
+      <main className="mt-16 max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto">
+        <header className="py-16 space-y-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50">Projects</h1>
+          <p className="text-lg font-medium text-gray-700 dark:text-gray-500">A catalogue of select works, side projects, and experiments.</p>
         </header>
 
-        <div className="max-w-screen-sm lg:max-w-4xl mx-6 md:mx-auto">
+        {/* Selected works section */}
 
-          {/* Selected works section */}
+        <h3 className="text-2xl font-bold mb-8">Selected Works</h3>
+        <SelectedWorks projects={projects} />
 
-          <h3 className="text-3xl font-bold mb-8">Selected Works</h3>
-          <SelectedWorks projects={projects} />
+        {/* Side projects section */}
 
-          {/* Side projects section */}
-
-          <div className="my-16">
-            <h3 className="text-3xl font-bold mb-8">Side Projects</h3>
-            <SideProjectsList sideprojects={sideprojects} />
-          </div>
-
-
+        <div className="my-16">
+          <h3 className="text-2xl font-bold mb-8">Side Projects</h3>
+          <SideProjectsList sideprojects={sideprojects} />
         </div>
 
       </main>

@@ -42,33 +42,33 @@ export default function PostView({ blog, content }) {
     <Layout>
       <Head>
         <title>{blog.title}</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicons/alien.png" />
       </Head>
 
       <ScrollToTop />
-      <div className="h-1 bg-gradient-to-r from-red-500 via-pink-500 to-purple-400 max-w-screen"></div>
+      <div className="max-w-screen h-1 bg-gradient-to-r from-red-500 via-pink-500 to-purple-400"></div>
 
-      <div className="max-w-screen md:max-w-screen-md mx-6 md:mx-auto">
+      <div className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto">
         <Link href="/writing">
           <a>
             <button className="inline-flex space-x-2 my-10 items-center">
               <ArrowLeft />
-              <p className="font-medium text-gray-800 pb-1 hover:text-indigo-600">Back to Writing</p>
+              <p className="font-medium text-gray-900 dark:text-gray-50 pb-1 hover:text-indigo-600 dark:hover:text-sky-400">Back to Writing</p>
             </button>
           </a>
         </Link>
         <main>
           <header className="flex-col mt-12 mb-10 space-y-4 justify-center">
-            <h2 className="text-5xl text-gray-800 font-bold text-center">{blog.title}</h2>
-            <p className="text-lg text-center text-gray-700">{blog.excerpt}</p>
-            <div className="flex justify-center space-x-2">
+            <h2 className="text-4xl text-gray-900 dark:text-gray-50 font-bold text-center">{blog.title}</h2>
+            <p className="text-lg text-center text-gray-700 dark:text-gray-400 font-medium">{blog.excerpt}</p>
+            <div className="flex justify-center space-x-2 items-center align-middle">
               <Calendar />
-              <p className="text-gray-500">{new Date(blog.publishedAt).toDateString()}</p>
+              <p className="text-gray-500 font-medium text-base">{new Date(blog.publishedAt).toDateString()}</p>
             </div>
           </header>
           <BlogDivider />
 
-          <div className="prose prose-lg my-10 mx-auto">
+          <div className="prose prose-lg dark:prose-dark text-gray-900 dark:text-gray-100 my-10 mx-auto">
             <MDXRemote {...content} />
           </div>
 

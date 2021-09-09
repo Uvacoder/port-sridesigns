@@ -24,25 +24,25 @@ export default function Writing({ blogs }) {
     <Layout>
       <Head>
         <title>Writing</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicons/alien.png" />
       </Head>
       <Header />
-      <main className="lg:mt-14">
-        <header className="bg-rose-400 h-3/5 py-24 flex flex-col items-center justify-center bg-plus bg-repeat">
-          <h1 className="text-6xl text-center font-bold pb-5">Writing</h1>
-          <p className="text-xl font-medium text-center max-w-xl mx-auto">Sharing my thoughts on user experience, product design,
+      <main className="mt-16 max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto">
+        <header className="py-16 space-y-4">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50">Writing</h1>
+          <p className="text-lg font-medium text-gray-700 dark:text-gray-400">Sharing my thoughts on user experience, product design,
             art and tech.</p>
         </header>
-        <div className="max-w-screen-sm md:max-w-xl mx-6 md:mx-auto my-16 space-y-10">
+        <div className="my-6 space-y-10">
           {blogs?.blogPosts?.map((blog) => (
             <div key={blog.slug} className="space-y-2">
               <Link href={`/writing/${blog.slug}`}>
                 <a>
-                  <h4 className="text-2xl font-bold text-gray-800">{blog.title}</h4>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-gray-50 hover:text-indigo-500 dark:hover:text-sky-400">{blog.title}</h4>
                 </a>
               </Link>
-              <p className="text-lg font-medium text-gray-700">{blog.excerpt}</p>
-              <p className="text-base font-medium text-gray-500">{new Date(blog.publishedAt).toDateString()}</p>
+              <p className="text-base font-medium text-gray-700 dark:text-gray-400">{blog.excerpt}</p>
+              <p className="text-sm font-medium text-gray-500">{new Date(blog.publishedAt).toDateString()}</p>
             </div>
           ))}
 

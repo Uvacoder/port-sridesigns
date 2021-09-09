@@ -31,9 +31,11 @@ export default function ScrollToTop() {
   return (
     <div className="scroll-to-top">
       {isVisible && (
-        <div className="bg-white hover:bg-gray-800 p-2 fixed bottom-6 right-6 z-50 shadow cursor-pointer border-2 border-gray-800" onClick={scrollToTop}>
-          <ArrowUp />
+        <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-400 rounded-md p-0.5 fixed bottom-6 right-6 z-50 shadow cursor-pointer" >
+          <button className="bg-white dark:bg-darkblack transition duration-200 ease-linear rounded w-full p-2" onClick={scrollToTop}>
+            <ArrowUp />
 
+          </button>
         </div>
       )}
     </div>
