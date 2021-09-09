@@ -90,11 +90,11 @@ module.exports = {
               fontWeight: '700',
             },
             a: {
-              color: theme('colors.indigo.400'),
+              color: theme('colors.sky.400'),
               textDecoration: 'none',
               fontWeight: '700',
               '&:hover': {
-                color: theme('colors.indigo.600')
+                color: theme('colors.sky.600')
               },
             },
             blockquote: {
