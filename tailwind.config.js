@@ -33,7 +33,7 @@ module.exports = {
       },
 
       typography: (theme) => ({
-        default: {
+        lg: {
           css: {
             color: theme('colors.gray.900'),
             h2: {
@@ -105,7 +105,12 @@ module.exports = {
               color: theme('colors.gray.50'),
               fontWeight: '500',
             },
-
+            p: {
+              fontWeight: '500',
+            },
+            li: {
+              fontWeight: '500',
+            },
           },
         },
       }),

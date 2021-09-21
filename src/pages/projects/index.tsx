@@ -52,7 +52,7 @@ export default function Projects({ projects, sideprojects }: Props) {
         <link rel="icon" href="/favicons/manlaptop.png" />
       </Head>
       <Header />
-      <main className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto">
+      <main className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto relative">
         <header className="py-32 space-y-4">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50">Projects</h1>
           <p className="text-lg font-medium text-gray-700 dark:text-gray-500">A catalogue of select works, side projects, and experiments.</p>
@@ -71,7 +71,10 @@ export default function Projects({ projects, sideprojects }: Props) {
         </div>
 
       </main>
-      <Footer />
+      <div className="bottom-0 absolute w-full">
+        <Footer />
+      </div>
+
 
     </Layout>
   )

@@ -58,7 +58,7 @@ const Header = () => {
       {/* Mobile Navigation Ends */}
 
       {/* Desktop Navigation Starts */}
-      <div className="hidden lg:grid fixed bg-white dark:bg-black dark:bg-opacity-90 top-0 z-10 w-full border-b border-gray-200 dark:border-gray-900 py-4">
+      <div className="hidden lg:grid fixed bg-white dark:bg-black bg-opacity-90 dark:bg-opacity-90 top-0 z-10 w-full border-b border-gray-200 dark:border-gray-900 py-4">
         <div className="mx-auto grid grid-cols-4 gap-8 max-w-screen-lg">
           <div className="col-span-1 items-center ">
             <Link href="/">

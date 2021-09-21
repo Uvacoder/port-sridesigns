@@ -52,7 +52,7 @@ export default function About() {
               <p className="text-2xl">🥳</p>
               <p>Recently, TCS embraced Microsoft 365 to create unified communication, secure collaboration and seamless access to integrated business applications.</p>
               <p>I helped design and launch an automated and &lsquo;gamified&rsquo; migration process that enabled TCS to onboard more than <strong className="font-semibold">170,000 employees in less than 180 days.</strong></p>
-              <p>This initiative helped us <em className="italic">reduce costs and human hours, increase agility and productivity</em> and helped us seamlessly enable the <em className="italic">transition to remote work</em> when the pandemic occurred.</p>
+              <p>This initiative helped us <em className="italic">reduce costs and human hours, increase agility and productivity</em> and helped us seamlessly enable the <em className="font-semibold">transition to remote work</em> when the pandemic occurred.</p>
               <Link href="https://drive.google.com/file/d/1bzjQ13Z0JoyGdDPTlDz5MvbK25wYlG2_/view?usp=sharing">
                 <a target="_blank" rel="noopener noreferrer">
                   <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 rounded-lg flex md:inline-flex items-center p-0.5 hover:shadow-md my-6">
@@ -67,7 +67,7 @@ export default function About() {
           <div className="space-y-6">
             <p>Before Digital Workplace, I was part of the <strong className="font-semibold">Fresco Design Team.</strong> We designed a suite of mobile and web applications for the 400k+ employees of TCS.</p>
 
-            <p>I helped design and successfully launch a <strong className="font-semibold">&ldquo;Gamified&rdquo; Learning platform</strong> that incentivised learning and progress and helped upskill more than <strong className="font-semibold">300K employees</strong> in the new digital technologies.</p>
+            <p>I helped design and successfully launch a <strong className="font-semibold">&ldquo;gamified&rdquo; Learning platform</strong> that incentivised learning and progress and helped upskill more than <strong className="font-semibold">300K employees</strong> in the new digital technologies.</p>
 
             <p>I also led the end-to-end design of revamping the <strong className="font-semibold">appraisal management platform of TCS.</strong> We created and launched a platform that empowered <strong className="font-semibold">400k+ employees</strong> to define their career path and aspirations and help them progress through continuous feedback on their goals and attributes.</p>
             <Link href="https://www.tcs.com/reimagining-research/the-digital-workplace">
@@ -81,7 +81,7 @@ export default function About() {
               </Link>
             </p>
 
-            <p>I started my career in 2011 as a web developer and lost touch with coding once I moved into design in 2014. I recently started learning to code and will be working on side projects to help improve my coding. You can find me on&nbsp;
+            <p>I started my career in 2011 as a web developer and lost touch with coding once I moved into design in 2014. I recently started coding again and will be working on side projects to help improve my coding skills. You can find me on&nbsp;
               <Link href="https://www.figma.com/@sriramvenugopal">
                 <a className="hover:text-sky-400 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500" target="_blank" rel="noopener noreferrer">Github</a>
               </Link>
