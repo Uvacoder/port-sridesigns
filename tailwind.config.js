@@ -106,7 +106,7 @@ module.exports = {
               fontWeight: '500',
             },
             p: {
-              fontWeight: '500',
+              fontWeight: '400',
             },
             li: {
               fontWeight: '500',
