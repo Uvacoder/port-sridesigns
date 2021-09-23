@@ -42,7 +42,10 @@ export default function Home({ home }: Props) {
             <p className="text-6xl font-bold text-left py-5 inline-flex animate-wiggle">👋</p>
             <h1 className="text-4xl font-bold text-left leading-snug py-5">Hello, I&apos;m Sriram. I&apos;m a product designer, maker, and illustrator from Chennai.<br /> I &apos;m currently designing products &amp; experiences for&nbsp;
               <Link href="https://www.tcs.com/">
-                <a className="hover:text-indigo-500 dark:hover:text-sky-400 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500" target="_blank" rel="noopener noreferrer">Tata Consultancy Services.</a>
+                <a className="hover:text-indigo-500 dark:hover:text-sky-400 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 hidden md:inline-flex" target="_blank" rel="noopener noreferrer">Tata Consultancy Services.</a>
+              </Link>
+              <Link href="https://www.tcs.com/">
+                <a className="hover:text-indigo-500 dark:hover:text-sky-400 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 md:hidden" target="_blank" rel="noopener noreferrer">TCS.</a>
               </Link>
             </h1>
             <p className="text-lg font-medium text-left text-gray-700 dark:text-gray-400">I design delightful consumer and enterprise applications for clients across diverse industries and geographies.</p>
