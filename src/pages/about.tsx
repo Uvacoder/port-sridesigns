@@ -16,7 +16,7 @@ export default function About() {
         <link rel="icon" href="/favicons/smileyface.png" />
       </Head>
       <Header />
-      <main className="max-w-screen-sm md:max-w-screen-md mx-6 md:mx-auto py-16">
+      <main className="max-w-screen md:max-w-screen-md mx-6 md:mx-auto py-16">
         <header className="space-y-4 pt-16 pb-10">
           <Image
             src={profilePic}
@@ -41,7 +41,7 @@ export default function About() {
         </header>
         <div className="space-y-8  text-lg font-medium text-gray-900 dark:text-gray-50 leading-loose ">
           <div className="space-y-6">
-            <p>I&apos;m a core member of an in-house product design team, currently designing solutions for the <strong className="font-semibold text-gray-900 dark:text-gray-50">&lsquo;Digital Workplace&rsquo;</strong> business unit.</p>
+            <p>I&apos;m a core member of an in-house product design team @ TCS, currently designing solutions for the <strong className="font-semibold text-gray-900 dark:text-gray-50">&lsquo;Digital Workplace&rsquo;</strong> business unit.</p>
             <p>We create products and solutions in-house and collaborate with a diverse clientele across the globe to create seamless and delightful employee experiences across enterprise applications.</p>
             <Link href="https://www.tcs.com/reimagining-research/the-digital-workplace">
               <a target="_blank" rel="noopener noreferrer">

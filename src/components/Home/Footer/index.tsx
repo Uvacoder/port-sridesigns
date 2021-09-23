@@ -23,9 +23,9 @@ export default function HomeFooter() {
             </Link> | Icons from&nbsp;
             <Link href="https://heroicons.dev">
               <a className="text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline font-semibold">Heroicons</a>
-            </Link> | Patterns from&nbsp;
-            <Link href="https://www.heropatterns.com/">
-              <a className="text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline font-semibold">Hero Patterns</a>
+            </Link> | Social Icons from&nbsp;
+            <Link href="https://www.flaticon.com/authors/pixel-perfect">
+              <a className="text-gray-300 hover:text-indigo-500 dark:hover:text-sky-400 hover:underline font-semibold">Pixel Perfect (Flaticons)</a>
             </Link>
           </p>
         </div>
