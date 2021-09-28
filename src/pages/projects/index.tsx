@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -8,6 +6,8 @@ import SelectedWorks from "../../components/SelectedWorks";
 import { GetCaseStudies } from "../../graphql/data/projects/casestudies";
 import SideProjectsList from "../../components/SideProjectsList";
 import { GetSideProjects } from "../../graphql/data/sideprojects/sprojects";
+import AppList from "../../components/App";
+import { GetAppExplorations } from "../../graphql/data/apps/apps";
 
 interface Props {
   slug: string
@@ -27,23 +27,30 @@ interface Props {
     publishedAt: string
     summary: string
   }
+  apps: {
+    title: string
+    publishedAt: string
+    summary: string
+  }
 }
 
 export async function getStaticProps() {
   const projects = await GetCaseStudies()
   const sideprojects = await GetSideProjects()
+  const apps = await GetAppExplorations()
 
   return {
     //This data is a little dynamic, so we'll update it every hour.
     revalidate: 60 * 60,
     props: {
       projects,
-      sideprojects
+      sideprojects,
+      apps
     },
   }
 }
 
-export default function Projects({ projects, sideprojects }: Props) {
+export default function Projects({ projects, sideprojects, apps }: Props) {
   console.log(projects);
   return (
     <Layout>
@@ -68,6 +75,13 @@ export default function Projects({ projects, sideprojects }: Props) {
         <div className="my-16">
           <h3 className="text-2xl font-bold mb-8">Side Projects</h3>
           <SideProjectsList sideprojects={sideprojects} />
+        </div>
+
+        {/* App Explorations section */}
+
+        <div className="my-16">
+          <h3 className="text-2xl font-bold mb-8">App Explorations</h3>
+          <AppList apps={apps} />
         </div>
 
       </main>

@@ -10,6 +10,7 @@ import HomeSideProject from '../components/Home/SideProjects'
 import HomeBlogList from '../components/Home/Blogs'
 import HomeButton from '../components/Home/Button'
 import HomeFooter from '../components/Home/Footer'
+import HomeAppList from '../components/Home/Apps'
 
 interface Props {
   home: string,
@@ -62,6 +63,11 @@ export default function Home({ home }: Props) {
           {/* Side Projects Section */}
           <div className="my-16" >
             <HomeSideProject home={home} />
+          </div>
+
+          {/* App Exploration Section */}
+          <div className="my-24" >
+            <HomeAppList home={home} />
           </div>
 
           {/* Blogs Section */}

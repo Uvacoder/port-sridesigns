@@ -25,6 +25,12 @@ export async function GetHome() {
           height
         }
       }
+      appExplorations(orderBy: featured_DESC first: 1) {
+        title
+        slug
+        summary
+        publishedAt
+      }
       blogPosts(orderBy: publishedAt_DESC first: 3) {
         title
         slug
