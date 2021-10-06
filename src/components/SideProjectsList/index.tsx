@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function SideProjectsList({ sideprojects }) {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto space-y-8">
       {sideprojects?.sideProjects?.map((sideproject) => (
         <div key={sideproject.slug} className="md:grid grid-cols-3 gap-4 space-y-4 md:space-y-0">
           <div className="space-y-2 col-span-2">
