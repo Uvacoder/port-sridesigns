@@ -31,7 +31,7 @@ export default function About() {
               <a className="hover:text-sky-400 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500" target="_blank" rel="noopener noreferrer">TCS.</a>
             </Link>
           </h1>
-          <Link href="https://drive.google.com/file/d/1bzjQ13Z0JoyGdDPTlDz5MvbK25wYlG2_/view?usp=sharing">
+          <Link href="https://drive.google.com/file/d/1RI57M0PEQIg4m0xJyGvLNsH_eLQWMrOI/view?usp=sharing">
             <a target="_blank" rel="noopener noreferrer">
               <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 rounded-lg flex md:inline-flex items-center p-0.5 hover:shadow-md my-6">
                 <button className="bg-white dark:bg-gray-900 py-2 px-6 text-gray-900 dark:text-gray-50 hover:text-sky-500 font-bold text-base text-center transition duration-200 ease-linear rounded-md w-full">View my resume&nbsp;&nbsp;😎</button>
