@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
-import HomeSocial from '../components/Home/Social'
 import { GetHome } from '../graphql/data/home'
 import HomeWork from '../components/Home/CaseStudies'
 import HomeSideProject from '../components/Home/SideProjects'
@@ -41,7 +39,7 @@ export default function Home({ home }: Props) {
         <main>
           <header className="max-w-screen md:max-w-screen-md mx-6 md:mx-auto pt-24 pb-16 md:py-32">
             <p className="text-6xl font-bold text-left py-5 inline-flex animate-wiggle">👋</p>
-            <h1 className="text-4xl font-bold text-left leading-snug py-5">Hello, I&apos;m Sriram. I&apos;m a product designer, maker, and illustrator from Chennai.<br /> I &apos;m currently designing products &amp; experiences for&nbsp;
+            <h1 className="text-4xl font-bold text-left leading-snug py-5">Hello, I&apos;m Sriram. I&apos;m a product designer, maker, and illustrator from Chennai.<br /> I&apos;m currently designing products &amp; experiences for&nbsp;
               <Link href="https://www.tcs.com/">
                 <a className="hover:text-indigo-500 dark:hover:text-sky-400 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 hidden md:inline-flex" target="_blank" rel="noopener noreferrer">Tata Consultancy Services.</a>
               </Link>
