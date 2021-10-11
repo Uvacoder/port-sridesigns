@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
   const post = await GetPost(params.slug)
 
   return {
-    revalidate: 60 * 60,
+    revalidate: 60,
     props: {
       blog: post.blogPosts[0],
       content: await serialize(post.blogPosts[0].body.markdown)
